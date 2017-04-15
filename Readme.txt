@@ -24,4 +24,4 @@ Steps to run the project
         a. first put all the files in different folders by year
         b. within each folder, remove the header and then concatenate the files into one single file with the command:
 
-        ls * | xargs -n 1 tail -n+2 > output_YYYY.csv
+        ls *.csv | xargs -n 1 tail -n+2 > output_YYYY.csv
