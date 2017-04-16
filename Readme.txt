@@ -3,7 +3,7 @@ Steps to run the project
 
 1. set up the EC2 AMI with attached EBS volume as described in Exercise 2 instructions
 
-2. create and connect to AMI following Lab 6 instructions
+2. Start postgres with "/data/start_postgres.sh"
 
 3. make sure these are installed on the instance (can use "pip install ..." as the root user)
         lxml==3.5.0
@@ -25,3 +25,6 @@ Steps to run the project
         b. within each folder, remove the header and then concatenate the files into one single file with the command:
 
         ls *.csv | xargs -n 1 tail -n+2 > output_YYYY.csv
+
+7. for each csv file of tweets, run the command "python dbscript.py filename.csv" to create a postgres database and populate it with the tweets
+
