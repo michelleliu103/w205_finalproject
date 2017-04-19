@@ -2,6 +2,9 @@ Steps to run the project
 ------------------------
 
 1. set up the EC2 AMI with attached EBS volume as described in Exercise 2 instructions
+        if "df -k" doesn't show a /data volume...
+                use "fdisk -l" to find path and 
+                "mount -t ext4 (path) /data" to mount it
 
 2. Start postgres with "/data/start_postgres.sh"
 
