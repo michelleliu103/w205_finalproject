@@ -7,7 +7,7 @@ import psycopg2
 def select_1000_tweets():
 	conn = psycopg2.connect(database="finalproject", user="postgres", password="pass", host="localhost", port="5432")
 	cur = conn.cursor()
-	cur.execute("SELECT id, tweet from tweets where random() limit 1000")
+	cur.execute("SELECT id, tweet from tweets order by random() limit 1000")
 	
 	tweets = cur.fetchall()
 	return tweets
