@@ -58,7 +58,7 @@ def sentiment_analysis_api_3(tweet_list):
   }, data={'text': tweet[1]})
         rating_dict = json.loads(api_request.text)
         rating = int(rating_dict["rating"])
-            cur.execute("UPDATE tweets SET sentimentapi=%s WHERE id =%s", (rating,tweet[0]))
+        cur.execute("UPDATE tweets SET sentimentapi=%s WHERE id =%s", (rating,tweet[0]))
 
 
 tweets = select_1000_tweets()
