@@ -11,7 +11,7 @@ try:
         # CREATE DATABASE can't run inside a transaction
         conn.set_isolation_level(ISOLATION_LEVEL_AUTOCOMMIT)
         cur = conn.cursor()
-        cur.execute("CREATE DATABASE finalproject")
+        cur.execute("CREATE DATABASE finalprojecttweets")
         cur.close()
         conn.close()
 
@@ -20,7 +20,7 @@ except:
 
 
 #Connecting to tcount
-conn = psycopg2.connect(database="finalproject", user="postgres", password="pass", host="localhost", port="5432")
+conn = psycopg2.connect(database="finalprojecttweets", user="postgres", password="pass", host="localhost", port="5432")
 conn.set_isolation_level(ISOLATION_LEVEL_AUTOCOMMIT)
 
 #Create a Table

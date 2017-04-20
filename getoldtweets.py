@@ -2,6 +2,7 @@ import got
 import codecs
 from datetime import date, timedelta
 
+
 search_term = 'obamacare%20OR%20aca'
 
 starttime = '2009-01-01'
@@ -10,12 +11,12 @@ starttime = '2009-01-01'
 #starttime = '2013-10-19'
 
 #start date
-d1 = date(2009,1,1)
-#d1 = date(2010, 5, 10) 
+#d1 = date(2009,1,1)
+d1 = date(2010, 5, 10) 
 #d1 = date(2011, 1, 24)
 #d1 = date(2011, 7, 2)
-#d1 = date(2013, 10, 19)
-#d2 = date(2017, 4, 15)  # end date
+#d1 = date(2016, 01, 01)
+d2 = date(2016, 12, 31)  # end date
 
 list=[starttime]
 
