@@ -2,7 +2,7 @@ import requests
 import pandas as pd
 import numpy as np
 import json
-import psycopg
+import psycopg2
 
 def select_1000_tweets():
 	conn = psycopg2.connect(database="finalproject", user="postgres", password="pass", host="localhost", port="5432")
