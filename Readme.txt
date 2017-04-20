@@ -22,8 +22,9 @@ Steps to run the project
         c. Edit d1 and d2 to the desired start date and end date in date(YYYY,MM,DD) format
 
         The Python script will pull 1000 tweets per day, starting on the desired start date, every 7 days, until the desired end date.
-        In our case, the start date was 2010-05-10 and our end date was 2017-03-01. The script will output the csv files for each day in the current directory.
+        In our case, the start date was 2009-01-01 and our end date was 2017-04-15. The script will output the csv files for each day in the current directory.
         Each file has the headers: username; date; retweets; favorites; text; geo; mentions; hashtags; id; permalink
+        Note. The error "Twitter weird response" would come up if it fails to get a JSON response from the URL. Re-run the code will if this error appears.
 
 7. combine all the csv files for one given year into one file per year
         a. first put all the files in different folders by year
