@@ -35,3 +35,10 @@ Steps to run the project
 8. for each csv file of tweets, run the command "python dbscript.py filename.csv" to create a postgres database and populate it with the tweets
 
 9. Run the command "python Sentiment_Functions.py" to take a sampling of tweets from the database, call two sentiment APIs to determine the sentiment of the tweets, and update the database with the sentiment results. 
+
+10. To take a quick look and confirm the tweets and sentiment scores are successfully stored:
+        a. start postgres $ psql -U postgres
+        b. log into the database: \c finalprojecttweets
+        c. look at the tables in the database: \d
+
+
