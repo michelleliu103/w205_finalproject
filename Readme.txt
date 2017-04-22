@@ -40,5 +40,19 @@ Steps to run the project
         a. start postgres $ psql -U postgres
         b. log into the database: \c finalprojecttweets
         c. look at the tables in the database: \d
+        
+11. To connect postgres database to Tableau:
+        a. set up the ODBC PostgresSQL connection with databasename,server, port, username and password created in step 8. Test connection to make sure it successully connected
+        b. Connect Tableau Desktop with "To a Server"-> PostgresSQL -> and fill in all info used in previous steps
+        
+12. Go to KPP's website to download the lastest poll result data:
+        a. Go to: http://kff.org/interactive/kaiser-health-tracking-poll-the-publics-views-on-the-aca/#?response=Favorable--Unfavorable--Don't%2520Know
+        b. Share/Download -> Download Data
+        c. Reverse pivot the data and imported to Tableau
+        
+13. To refresh Tableau dashboard in the future: 
+        a. do step 12 a,b
+        b. open Tableau and refresh and save (re-extract both data is recommended because this will speed up the dashboard when used)
+        c. save (or if you have a Tableau server, you can publish it)
 
 
