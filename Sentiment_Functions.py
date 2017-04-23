@@ -4,10 +4,10 @@ import numpy as np
 import json
 import psycopg2
 
-def select_10000_tweets():
+def sample_tweets(quantity):
     conn = psycopg2.connect(database="finalprojecttweets", user="postgres", password="pass", host="localhost", port="5432")
     cur = conn.cursor()
-    cur.execute("SELECT id, tweet from tweets order by random() limit 10000")
+    cur.execute("SELECT id, tweet from tweets order by random() limit quantity")
 	
     tweets = cur.fetchall()
     return tweets
@@ -61,7 +61,7 @@ def sentiment_analysis_api_2(tweet_list):
     conn.close()
 
 
-tweets = select_10000_tweets()
+tweets = sample_tweets(10)
 
 sentiment_analysis_api_1(tweets)
 sentiment_analysis_api_2(tweets)

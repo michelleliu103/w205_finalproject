@@ -34,7 +34,9 @@ Steps to run the project
 
 9. Run the command "python Sentiment_Functions.py" to take a sampling of
 tweets from the database, call two sentiment analysis APIs to determine the sentiment
-of the tweets, and update the database with the sentiment results. Note - the
+of the tweets, and update the database with the sentiment results. To change
+the number of tweets sampled, modify the argument passed into the
+sample_tweets function (at the bottom of the script). Note - the
 API keys have been omitted from the code. Please reach out to jamaralex on
 Slack or email jamaralex@gmail.com for the keys. If you are running the script
 with python 2, you may see warnings related to upgrading to a newer
