@@ -26,13 +26,11 @@ Steps to run the project
         Each file has the headers: username; date; retweets; favorites; text; geo; mentions; hashtags; id; permalink
         Note. The error "Twitter weird response" would come up if it fails to get a JSON response from the URL. Re-run the code will if this error appears.
 
-7. combine all the csv files for one given year into one file per year
-        a. first put all the files in different folders by year
-        b. within each folder, remove the header and then concatenate the files into one single file with the command:
+7. remove the header and then concatenate the files into one single file with the command:
 
-        ls *.csv | xargs -n 1 tail -n+2 > output_YYYY.csv
+        ls *.csv | xargs -n 1 tail -n+2 > output.csv
 
-8. for each csv file of tweets, run the command "python dbscript.py filename.csv" to create a postgres database and populate it with the tweets
+8. run the command "python dbscript.py output.csv" to create a postgres database and populate it with the tweets
 
 9. Run the command "python Sentiment_Functions.py" to take a sampling of tweets from the database, call two sentiment APIs to determine the sentiment of the tweets, and update the database with the sentiment results. 
 
@@ -42,7 +40,7 @@ Steps to run the project
         c. look at the tables in the database: \d
         
 11. To connect postgres database to Tableau:
-        a. set up the ODBC PostgresSQL connection with databasename,server, port, username and password created in step 8. Test connection to make sure it successully connected
+        a. set up the ODBC PostgresSQL connection with databasename, server, port, username and password created in step 8. Test connection to make sure it successully connected.
         b. Connect Tableau Desktop with "To a Server"-> PostgresSQL -> and fill in all info used in previous steps
         
 12. Go to KPP's website to download the lastest poll result data:
@@ -54,5 +52,4 @@ Steps to run the project
         a. do step 12 a,b
         b. open Tableau and refresh and save (re-extract both data is recommended because this will speed up the dashboard when used)
         c. save (or if you have a Tableau server, you can publish it)
-
 
