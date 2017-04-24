@@ -55,8 +55,12 @@ version. You can safely ignore these.
         b. Share/Download -> Download Data
         c. Reverse pivot the data and imported to Tableau
         
-13. To refresh Tableau dashboard in the future: 
+13a. Open Tableau with both data connected, create charts and graphs that you would like to analyze
+
+13b. To refresh Tableau dashboard in the future: 
         a. do step 12 a,b
-        b. open Tableau and refresh and save (re-extract both data is recommended because this will speed up the dashboard when used)
+        b. open Tableau and refresh and re-extract both data (this is recommended because this will speed up the dashboard when used) 
         c. save (or if you have a Tableau server, you can publish it)
+        
+Note: Both Tableau and Tableau workbook file are too large to upload here. So an exported pdf version is uploaded here to demonstrate what visualization could be done. And this dashboard is also published at: https://us-east-1.online.tableau.com/t/tingwen/views/Obamacare/ExploreTweets?:embed=y&:showShareOptions=true&:display_count=no&:showVizHome=no  You should be able to visit it after register your own account if you did not have it yet. 
 
