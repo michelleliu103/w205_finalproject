@@ -1,8 +1,11 @@
 Steps to run the project
 ------------------------
 
-1. set up the EC2 AMI with attached EBS volume as described in Exercise 2 instructions
-        if "df -k" doesn't show a /data volume...
+1. set up the EC2 AMI with attached EBS volume as described in Exercise 2
+instructions. The AMI can be found in the N. Virginia region. The name is
+UCB_W205_Final_Project_Tweets and the ID is ami-3f20bd29. 
+        
+	If "df -k" doesn't show a /data volume...
                 use "fdisk -l" to find path and 
                 "mount -t ext4 (path) /data" to mount it
 
